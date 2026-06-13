@@ -62,8 +62,8 @@ function renderBooks(){
         card.classList.add("card");
         card.innerHTML = `
         <h2>${book.title}</h2>
-        <p>${book.author}}</p>
-        <p>${book.pages}</p>
+        <h3>${book.author}</h3>
+        <p>${book.pages} Pages</p>
         <label for="read">Read?:</label>
         <input type="checkbox" id="read-${index}" name="read">Read</input><br>
         <button type="button" id="delete-btn" book-index="${index}">Delete</button>
