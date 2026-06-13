@@ -47,4 +47,8 @@ addBook.addEventListener("click", (e)=> {
         return;
     }
     
+    addBookToLibrary(title.value, author.value, pages.value);
+    bookForm.reset();
+    bookForm.style.display = "none";
+
 });
