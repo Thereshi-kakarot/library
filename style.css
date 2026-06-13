@@ -76,3 +76,14 @@ body {
     margin-bottom: 5px;
     color: #333;
 }
+
+#book-form input{
+    padding: 15px 20px;
+    
+}
+#delete-btn{
+    padding: 10px 15px;
+    color: snow;
+    background-color: red;
+    border: none;
+}
