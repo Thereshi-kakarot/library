@@ -8,3 +8,43 @@ I will also have a function called addBookToLibrary which will push the book obj
 
 */
 
+const addBookBtn = document.getElementById('add-book-btn');
+const bookForm = document.getElementById('book-form');
+const container = document.querySelector('.container');
+const cancelBtn = document.getElementById('cancel-btn');
+const addBook = document.getElementById('add-book');
+const titleInput = document.getElementById('title');
+const authorInput = document.getElementById('author');
+const pagesInput = document.getElementById('pages');
+const readInput = document.getElementById('read');
+
+const myLibrary = [];
+
+function Book(title, author, pages){
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    
+}
+function addBookToLibrary(title, author, pages){
+    const book = new Book(title, author, pages);
+    myLibrary.push(book);
+    renderBooks();
+}
+addBookBtn.addEventListener("click", ()=> {
+    bookForm.style.display = "block";
+});
+
+cancelBtn.addEventListener("click", ()=> {
+    bookForm.style.display = "none";
+});
+
+addBook.addEventListener("click", (e)=> {
+    e.preventDefault();
+
+    if(titleInput.value === ""|| authorInput.value === ""|| pagesInput.value === ""){
+        alert("Please fill in all fields");
+        return;
+    }
+    
+});
