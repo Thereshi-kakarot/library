@@ -52,3 +52,23 @@ addBook.addEventListener("click", (e)=> {
     bookForm.style.display = "none";
 
 });
+
+function renderBooks(){
+    container.innerHTML = ``;
+
+    myLibrary.forEach((book, index) => {
+
+        const card =document.createElement("div");
+        card.classList.add("card");
+        card.innerHTML = `
+        <h2>${book.title}</h2>
+        <p>${book.author}}</p>
+        <p>${book.pages}</p>
+        <label for="read">Read?:</label>
+        <input type="checkbox" id="read" name="read">Read</input>
+        <button type="button">Delete</button>
+        `;
+
+        container.appendChild(card);
+    });
+}
