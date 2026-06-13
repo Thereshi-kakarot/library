@@ -65,10 +65,19 @@ function renderBooks(){
         <p>${book.author}}</p>
         <p>${book.pages}</p>
         <label for="read">Read?:</label>
-        <input type="checkbox" id="read" name="read">Read</input>
-        <button type="button">Delete</button>
+        <input type="checkbox" id="read-${index}" name="read">Read</input><br>
+        <button type="button" id="delete-btn" book-index="${index}">Delete</button>
         `;
-
         container.appendChild(card);
+
+        const deleteBtn = document.querySelectorAll('#delete-btn');
+        deleteBtn.forEach((btn) => {
+            btn.addEventListener('click', (e)=>{
+            const index = e.target.getAttribute("book-index");
+            myLibrary.splice(index, 1);
+            renderBooks();
+            });
+        });
+
     });
 }
