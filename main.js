@@ -1,0 +1,6 @@
+/* 
+What I am going to start with is to make sure that I link all required elements needed to be worked with from HTML to JavaScript.
+Then I will make the first button work by letting it show and hide the form.
+The form will 
+
+*/
